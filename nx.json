@@ -26,5 +26,6 @@
         "targetName": "lint"
       }
     }
-  ]
+  ],
+  "useLegacyCache": true
 }
