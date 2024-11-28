@@ -1,0 +1,26 @@
+{
+  "name": "kafka-socket-bridge",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/kafka-socket-bridge/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "kafka-socket-bridge:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "kafka-socket-bridge:build:development"
+        },
+        "production": {
+          "buildTarget": "kafka-socket-bridge:build:production"
+        }
+      }
+    }
+  }
+}
